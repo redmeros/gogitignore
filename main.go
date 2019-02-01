@@ -44,7 +44,7 @@ func main() {
 	if len(*downloadlst) > 0 {
 		var w *os.File
 		if *saveFlag == true {
-			file, err := os.OpenFile(".gitignore", os.O_WRONLY|os.O_CREATE, 0755)
+			file, err := os.OpenFile(".gitignore", os.O_WRONLY|os.O_CREATE, 0644)
 			if err != nil {
 				fmt.Println(err)
 				os.Exit(0)
